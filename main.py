@@ -20,6 +20,7 @@ def main():
 
         screen.fill( (0,0,0) )
         player_one.draw(screen)
+        player_one.update(dt)
         pygame.display.flip()
         dt = ( game_speed.tick(60) / 1000 )
 
