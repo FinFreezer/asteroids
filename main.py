@@ -3,7 +3,8 @@ from constants import *
 from player import *
 from asteroid import *
 from asteroidfield import *
-from shot import *
+from shot import Shot
+
 def main():
     pygame.init()
     game_speed = pygame.time.Clock()
@@ -20,7 +21,7 @@ def main():
     print(f"Screen height: {SCREEN_HEIGHT}")
     Asteroid.containers = (asteroids, updatable, drawable)
     Player.containers = (updatable, drawable)
-    Shot.containers = (updatable, drawable)
+    Shot.containers = (shots, updatable, drawable)
     AsteroidField.containers = (updatable)
     player_one = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     asteroid_field = AsteroidField()
