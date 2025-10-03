@@ -44,7 +44,7 @@ def main():
         for asteroid in asteroids:
             for shot in shots:
                 if ( asteroid.checkCollision(shot) ):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
 
         for entity in drawable:
